@@ -1,5 +1,6 @@
 const form = document.getElementById('form');
-const username = document.getElementById('username');
+const firstname = document.getElementById('firstname');
+const lastname = document.getElementById('lastname');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
@@ -12,17 +13,22 @@ form.addEventListener('submit', e => {
 });
 
 function checkInputs() {
-	const usernameValue = username.value.trim();
+	const firstnameValue = firstname.value.trim();
+	const lastnameValue = lastname.value.trim();
 	const emailValue = email.value.trim();
 	const passwordValue = password.value.trim();
 	const password2Value = password2.value.trim();
 	const numberValue= number.value.trim();
-	if(usernameValue === '') {
-		setErrorFor(username, 'Username cannot be blank');
+	if(firstnameValue === '') {
+		setErrorFor(firstname, 'Firstname cannot be blank');
 	} else {
-		setSuccessFor(username);
+		setSuccessFor(firstname);
 	}
-	
+	if(lastnameValue === '') {
+		setErrorFor(lastname, 'Lastname cannot be blank');
+	} else {
+		setSuccessFor(lastname);
+	}
 	if(emailValue === '') {
 		setErrorFor(email, 'Email cannot be blank');
 	} else if (!isEmail(emailValue)) {
@@ -43,6 +49,17 @@ function checkInputs() {
 		setErrorFor(password2, 'Passwords does not match');
 	} else{
 		setSuccessFor(password2);
+	}
+	if(numberValue === '') {
+		setErrorFor(password, 'Mobile Number cannot be blank');
+	}
+	if(isNaN(numberValue)){
+		setErrorFor(number,'Mobile number invalid');
+	} 
+	if(numberValue.length!=10){
+		setErrorFor(number,'Mobile Number Invalid');
+	} else {
+		setSuccessFor(password);
 	}
 }
 

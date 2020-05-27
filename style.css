@@ -96,8 +96,10 @@ body {
 	color: #e74c3c;
 	position: absolute;
 	bottom: 0;
-	left: 0;
+	left: 1;
+	margin-left: 20%;
 	visibility: hidden;
+
 }
 
 .form-control.error small {
@@ -108,9 +110,9 @@ body {
 	background-color:transparent;
 	border: 2px solid #8e44ad;
 	border-radius: 4px;
-	color: #fff;
+	color: rgb(0, 0, 0);
 	display: block;
-	font-family: inherit;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	padding: 10px;
 	margin-top: 20px;
