@@ -59,7 +59,7 @@ function checkInputs() {
 	if(numberValue.length!=10){
 		setErrorFor(number,'Mobile Number Invalid');
 	} else {
-		setSuccessFor(password);
+		setSuccessFor(number);
 	}
 }
 
